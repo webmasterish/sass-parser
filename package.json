@@ -1,0 +1,36 @@
+{
+  "name": "sass-parser",
+  "version": "0.0.1",
+  "description": "A simple npm package to parse a Sass file into a consumable json data",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bstashio/sass-parser.git"
+  },
+  "keywords": [
+    "sass",
+    "parse",
+    "variables",
+    "mixins",
+    "functions"
+  ],
+  "author": {
+    "name": "bstashio",
+    "email": "bstashio@gmx.com",
+    "url": "http://bstash.io"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/bstashio/sass-parser",
+  "bugs": {
+    "url": "https://github.com/bstashio/sass-parser/issues"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "files": [
+    "index.js",
+    "LICENSE",
+    "README.md"
+  ]
+}
