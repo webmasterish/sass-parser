@@ -32,5 +32,9 @@
     "index.js",
     "LICENSE",
     "README.md"
-  ]
+  ],
+  "dependencies": {
+    "line-by-line": "0.1.5",
+    "lodash": "4.17.4"
+  }
 }
