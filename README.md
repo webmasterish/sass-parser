@@ -45,63 +45,63 @@ The following are the available default options:
 
 ```js
 {
-	regex: {
-		variable: {
-			pattern	: '^\\$(.*?):\\s*([^;]+)\\s*([^;]+)\\!(global|default)',
-			flags		: 'g',
-		},
-		mixin_name: {
-			pattern	: '^=((?!\\d)[\\w_-][\\w\\d_-]*)',
-			flags		: 'gi',
-		},
-		mixin: {
-			pattern	: '^=((?!\\d)[\\w_-][\\w\\d_-]*)\\s*\\(\\s*([^\\)"]+)?.',
-			flags		: 'gi',
-		},
-		function_name: {
-			pattern	: '^@function\\s*?((?!\\d)[\\w_-][\\w\\d_-]*)',
-			flags		: 'gi',
-		},
-		function: {
-			pattern	: '^@function\\s*?((?!\\d)[\\w_-][\\w\\d_-]*)\\s*\\(\\s*([^\\)"]+)?.',
-			flags		: 'gi',
-		},
-	},
+  regex: {
+    variable: {
+      pattern: '^\\$(.*?):\\s*([^;]+)\\s*([^;]+)\\!(global|default)',
+      flags  : 'g',
+    },
+    mixin_name: {
+      pattern: '^=((?!\\d)[\\w_-][\\w\\d_-]*)',
+      flags  : 'gi',
+    },
+    mixin: {
+      pattern: '^=((?!\\d)[\\w_-][\\w\\d_-]*)\\s*\\(\\s*([^\\)"]+)?.',
+      flags  : 'gi',
+    },
+    function_name: {
+      pattern: '^@function\\s*?((?!\\d)[\\w_-][\\w\\d_-]*)',
+      flags  : 'gi',
+    },
+    function: {
+      pattern: '^@function\\s*?((?!\\d)[\\w_-][\\w\\d_-]*)\\s*\\(\\s*([^\\)"]+)?.',
+      flags  : 'gi',
+    },
+  },
 
-	// ---------------------------------------------------------------------------
-	
-	line_by_line: {
-		skipEmptyLines: true,
-	},
+  // ---------------------------------------------------------------------------
+  
+  line_by_line: {
+    skipEmptyLines: true,
+  },
 
-	// ---------------------------------------------------------------------------
-	
-	keys: {
-		
-		variables	: 'variables',
-		variable	: {
-			id		: 'id',
-			name	: 'name',
-			value	: 'value',
-		},
+  // ---------------------------------------------------------------------------
+  
+  keys: {
+    
+    variables: 'variables',
+    variable : {
+      id    : 'id',
+      name  : 'name',
+      value : 'value',
+    },
 
-		// -------------------------------------------------------------------------
-		
-		mixins: 'mixins',
-		mixin	: {
-			name			: 'name',
-			parameters: 'parameters',
-		},
+    // -------------------------------------------------------------------------
+    
+    mixins: 'mixins',
+    mixin : {
+      name      : 'name',
+      parameters: 'parameters',
+    },
 
-		// -------------------------------------------------------------------------
-		
-		functions	: 'functions',
-		function	: {
-			name			: 'name',
-			parameters: 'parameters',
-		},
-		
-	}
+    // -------------------------------------------------------------------------
+    
+    functions: 'functions',
+    function : {
+      name      : 'name',
+      parameters: 'parameters',
+    },
+    
+  }
 }
 ```
 
@@ -110,15 +110,15 @@ Example of using custom options:
 ```js
 const parser = require('sass-parser')();
 const parse  = parser({
-	keys: {
-		variables: 'vars',
-		mixin: {
-			parameters: 'param',
-		},
-		function: {
-			name: 'fn',
-		}
-	}
+  keys: {
+    variables: 'vars',
+    mixin: {
+      parameters: 'param',
+    },
+    function: {
+      name: 'fn',
+    }
+  }
 });
 
 parse.file('index.sass').then( data => console.log( data ) );
