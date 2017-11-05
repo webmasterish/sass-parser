@@ -2,6 +2,11 @@
 
 A simple npm package to parse a `sass` file into a consumable `json` data
 
+[![Build Status](https://img.shields.io/travis/bstashio/sass-parser/master.svg?style=flat-square)](https://travis-ci.org/bstashio/sass-parser)
+[![Coverage Status](https://img.shields.io/coveralls/github/bstashio/sass-parser/master.svg?style=flat-square)](https://coveralls.io/github/bstashio/sass-parser?branch=master)
+[![npm version](https://img.shields.io/npm/v/sass-parser.svg?style=flat-square)](http://npm.im/sass-parser)
+[![MIT License](https://img.shields.io/npm/l/express.svg?style=flat-square)](http://opensource.org/licenses/MIT)
+
 
 ## Install
 
