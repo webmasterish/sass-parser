@@ -1,0 +1,36 @@
+@charset "utf-8"
+
+// mixed sass file used as a fixture for testing ...
+
+// variables
+
+$var_1: #000 !default
+$var_2: #111 !global
+$var_3: #222 !default
+
+// -----------------------------------------------------------------------------
+
+// mixins
+
+=mix_1($param, $param2)
+  margin-top: $param
+  margin-bottom: $param2
+
+=mix_2()
+  margin-top: 1em
+
+=mix_3
+  margin-bottom: 1em
+
+// -----------------------------------------------------------------------------
+
+// functions
+
+@function fn_1($param)
+  @return $param
+
+@function fn_2()
+  @return #111
+
+@function fn_3
+  @return #222
