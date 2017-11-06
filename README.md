@@ -19,22 +19,22 @@ $ npm install sass-parser
 ## Usage
 
 ```js
-const parse   = require('sass-parser')();
+const parse = require('sass-parser')();
 
 // parse variable
-console.log( 'variable:' );
+console.log('variable:');
 console.log( parse.variable( '$control-padding-vertical: calc(0.375em - 1px) !default' ) );
 
 // parse mixin
-console.log( 'mixin:' );
-console.log( parse.mixin( '=arrow(   ,     )' ) );
+console.log('mixin:');
+console.log( parse.mixin( '=arrow( $color )' ) );
 
 // parse function
-console.log( 'function:' );
-console.log( parse.function( '@function     powerNumber        (    ,     )' ) );
+console.log('function:');
+console.log( parse.function( '@function powerNumber( $number, $exp )' ) );
 
 // parse file
-console.log( 'file:' );
+console.log('file:');
 parse.file('index.sass').then( data => console.log( data ) );
 ```
 
