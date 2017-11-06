@@ -206,13 +206,7 @@ app.chunk = ( line, what ) =>
  * @param {string} line
  * @return {object}
  */
-app.function = ( line ) =>
-{
-	
-	return app.chunk( line, 'function' );
-	
-}
-// app.function()
+app.function = line => app.chunk( line, 'function' );
 
 
 
@@ -222,13 +216,7 @@ app.function = ( line ) =>
  * @param {string} line
  * @return {object}
  */
-app.mixin = ( line ) =>
-{
-	
-	return app.chunk( line, 'mixin' );
-	
-}
-// app.mixin()
+app.mixin = line => app.chunk( line, 'mixin' );
 
 
 
@@ -319,7 +307,7 @@ app.file = ( file ) =>
 
 // -----------------------------------------------------------------------------
 
-module.exports = (options) => {
+module.exports = options => {
 	
 	app.options = _.defaultsDeep( options, app.options );
 
