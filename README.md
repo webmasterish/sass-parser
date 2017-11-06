@@ -1,5 +1,7 @@
 # Sass Parser
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/bstashio/sass-parser.svg)](https://greenkeeper.io/)
+
 A simple npm package to parse a `sass` file into a consumable `json` data
 
 [![Build Status](https://img.shields.io/travis/bstashio/sass-parser/master.svg?style=flat-square)](https://travis-ci.org/bstashio/sass-parser)
