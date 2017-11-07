@@ -22,13 +22,7 @@ const util = {
  * @param {string} name
  * @return {string}
  */
-util.options.get_key_name = ( name ) =>
-{
-	
-	return app.options.keys[ name ];
-	
-}
-// util.options.get_key_name()
+util.options.get_key_name = name => app.options.keys[ name ];
 
 
 
@@ -38,13 +32,7 @@ util.options.get_key_name = ( name ) =>
  * @param {string} name
  * @return {string}
  */
-util.options.get_variable_key_name = ( name ) =>
-{
-	
-	return app.options.keys['variable'][ name ];
-	
-}
-// util.options.get_variable_key_name()
+util.options.get_variable_key_name = name => app.options.keys['variable'][ name ];
 
 // -----------------------------------------------------------------------------
 
@@ -54,13 +42,7 @@ util.options.get_variable_key_name = ( name ) =>
  * @param {string} name - dir name or relative path
  * @return {string}
  */
-util.fixture.dir = ( name ) =>
-{
-		
-	return path.join( fixtures_path, name );
-	
-};
-// util.fixture.dir()
+util.fixture.dir = name => path.join( fixtures_path, name );
 
 
 
@@ -70,23 +52,7 @@ util.fixture.dir = ( name ) =>
  * @param {string} name - dir name
  * @return {string}
  */
-util.fixture.path = ( name ) =>
-{
-	
-	return ( file ) => {
-		
-		if ( ! file )
-		{
-			file = 'index.sass';
-		}
-
-		// -------------------------------------------------------------------------
-		
-		return path.join( fixtures_path, name, file );
-	};
-	
-};
-// util.fixture.path()
+util.fixture.path = name => file => path.join( fixtures_path, name, file || 'index.sass' );
 
 // -----------------------------------------------------------------------------
 
@@ -213,13 +179,7 @@ util.verify.chunk = ( result, name, parameters, what ) =>
  * @param {array} parameters
  * @return {self}
  */
-util.verify.mixin = ( result, name, parameters ) =>
-{
-	
-	return util.verify.chunk( result, name, parameters, 'mixin' );
-	
-};
-// util.verify.mixin()
+util.verify.mixin = ( ...args ) => util.verify.chunk( ...args, 'mixin' );
 
 
 
@@ -231,13 +191,7 @@ util.verify.mixin = ( result, name, parameters ) =>
  * @param {array} parameters
  * @return {self}
  */
-util.verify.function = ( result, name, parameters ) =>
-{
-	
-	return util.verify.chunk( result, name, parameters, 'function' );
-	
-};
-// util.verify.function()
+util.verify.function = ( ...args ) => util.verify.chunk( ...args, 'function' );
 
 // -----------------------------------------------------------------------------
 
