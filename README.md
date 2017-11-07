@@ -125,6 +125,10 @@ const parse  = parser({
 parse.file('index.sass').then( data => console.log( data ) );
 ```
 
+## API
+
+<!-- To auto generate/update this section run `npm run docs:api`. -->
+
 
 ## License
 
