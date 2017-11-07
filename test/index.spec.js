@@ -123,7 +123,7 @@ describe(`${pckg.name} Tests`, () => {
 			
 			let file_path = test_util.fixture.path('mixed')();
 			
-			return app.file( file_path ).then( ( result ) => {
+			return app.file( file_path ).then( result => {
 				
 				let keys = {
 					variables	: 'var',
