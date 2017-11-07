@@ -18,9 +18,11 @@
   "keywords": [
     "sass",
     "parse",
+    "parser",
     "variables",
     "mixins",
-    "functions"
+    "functions",
+    "json"
   ],
   "author": {
     "name": "bstashio",
