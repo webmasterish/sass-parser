@@ -1,12 +1,26 @@
 # Sass Parser
 
-A simple npm package to parse a `sass` file into a consumable `json` data
+> A simple npm package to parse a `sass` file into a consumable `json` data
 
 [![Build Status](https://img.shields.io/travis/bstashio/sass-parser/master.svg?style=flat-square)](https://travis-ci.org/bstashio/sass-parser)
 [![Coverage Status](https://img.shields.io/coveralls/github/bstashio/sass-parser/master.svg?style=flat-square)](https://coveralls.io/github/bstashio/sass-parser?branch=master)
 [![npm version](https://img.shields.io/npm/v/sass-parser.svg?style=flat-square)](http://npm.im/sass-parser)
 [![Greenkeeper badge](https://img.shields.io/badge/Greenkeeper-enabled-brightgreen.svg?style=flat-square)](https://greenkeeper.io/)
 [![MIT License](https://img.shields.io/npm/l/express.svg?style=flat-square)](http://opensource.org/licenses/MIT)
+
+
+## What it does
+
+This is a simple package that does a simple task of going through a `sass` file
+and extracting relevant details of `variables`, `mixins`, and `functions` 
+contained within that file. 
+
+Currently it only supports `sass` **old syntax**; meaning, 
+it does NOT handle the newer `scss` syntax.  For more details about this, 
+have a look at [Sass Syntax](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#Syntax).
+
+The extracted data is useful for usage in documentation or any other similar needs.
+
 
 ## Install
 
@@ -16,29 +30,97 @@ $ npm install sass-parser
 
 ## Usage
 
+### Parsing a file
+
 ```js
 const parse = require('sass-parser')();
 
-// parse variable
-console.log('variable:');
-console.log( parse.variable( '$control-padding-vertical: calc(0.375em - 1px) !default' ) );
-
-// parse mixin
-console.log('mixin:');
-console.log( parse.mixin( '=arrow( $color )' ) );
-
-// parse function
-console.log('function:');
-console.log( parse.function( '@function powerNumber( $number, $exp )' ) );
-
-// parse file
-console.log('file:');
 parse.file('index.sass').then( data => console.log( data ) );
+```
+
+#### Output of `parse.file`
+
+```js
+{
+  variables: {
+    var_1: {
+      id: 'var_1',
+      name: '$var_1',
+      value: '#000'
+    },
+    var_2: ...,
+    var_3: ...
+  },
+  mixins: {
+    mix_1: {
+      name: 'mix_1',
+      parameters: [
+        '$param_1',
+        ...
+      ]
+    },
+    mix_2: ...,
+    mix_3: ...
+  },
+  functions: {
+    fn_1: {
+      name: 'fn_1',
+      parameters: [
+        '$param_1',
+        ...
+      ]
+    },
+    fn_2: ...,
+    fn_3: ...
+  }
+}
+```
+
+### Parsing a variable
+
+```js
+parse.variable( '$white: #fff !default' );
+
+// output
+{
+  id: 'white',
+  name: '$white',
+  value: '#fff'
+}
+```
+
+### Parsing a mixin
+
+```js
+parse.mixin( '=mix( $color )' );
+
+// output
+{
+  name: 'mix',
+  parameters: [
+    '$color'
+  ]
+}
+```
+
+### Parsing a function
+
+```js
+parse.function( '@function do_something( $this, $that )' );
+
+// output
+{
+  name: 'do_something',
+  parameters: [
+    '$this',
+    '$that'
+  ]
+}
 ```
 
 ## Options
 
-The following are the available default options:
+### Default options:
 
 ```js
 {
@@ -102,7 +184,7 @@ The following are the available default options:
 }
 ```
 
-Example of using custom options:
+### Example of using custom options:
 
 ```js
 const parser = require('sass-parser');
@@ -120,6 +202,46 @@ const parse  = parser({
 
 parse.file('index.sass').then( data => console.log( data ) );
 ```
+
+#### Output after applying custom options
+
+```js
+{
+  vars: {           // <== now it's 'vars' instead of 'variables'
+    var_1: {
+      id: 'var_1',
+      name: '$var_1',
+      value: '#000'
+    },
+    var_2: ...,
+    var_3: ...
+  },
+  mixins: {
+    mix_1: {
+      name: 'mix_1',
+      param: [      // <== now it's 'param' instead of 'parameters'
+        '$param_1',
+        ...
+      ]
+    },
+    mix_2: ...,
+    mix_3: ...
+  },
+  functions: {
+    fn_1: {
+      fn: 'fn_1',   // <== now it's 'fn' instead of 'name'
+      parameters: [
+        '$param_1',
+        ...
+      ]
+    },
+    fn_2: ...,
+    fn_3: ...
+  }
+}
+```
+
+
 
 ## API
 
