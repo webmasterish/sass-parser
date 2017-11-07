@@ -11,7 +11,7 @@ A simple npm package to parse a `sass` file into a consumable `json` data
 
 ## Install
 
-```
+```sh
 $ npm install sass-parser
 ```
 
