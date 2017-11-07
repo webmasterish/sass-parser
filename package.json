@@ -6,9 +6,10 @@
   "scripts": {
     "test": "nyc --reporter=html --reporter=text mocha",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
-    "preversion": "npm test",
+    "preversion": "npm test && npm run docs:api",
     "version": "git add --all",
-    "postversion": "git push && git push --tags"
+    "postversion": "git push && git push --tags",
+    "docs:api": "documentation readme index.js --section=API"
   },
   "repository": {
     "type": "git",
