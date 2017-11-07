@@ -109,7 +109,7 @@ The following are the available default options:
 Example of using custom options:
 
 ```js
-const parser = require('sass-parser')();
+const parser = require('sass-parser');
 const parse  = parser({
   keys: {
     variables: 'vars',
