@@ -6,9 +6,10 @@
   "scripts": {
     "test": "nyc --reporter=html --reporter=text mocha",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
-    "preversion": "npm test",
+    "preversion": "npm test && npm run docs:api",
     "version": "git add --all",
-    "postversion": "git push && git push --tags"
+    "postversion": "git push && git push --tags",
+    "docs:api": "documentation readme index.js --section=API"
   },
   "repository": {
     "type": "git",
@@ -46,6 +47,7 @@
   "devDependencies": {
     "chai": "4.1.2",
     "coveralls": "3.0.0",
+    "documentation": "5.3.3",
     "mocha": "4.0.1",
     "nyc": "11.3.0"
   }

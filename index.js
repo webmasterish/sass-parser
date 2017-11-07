@@ -146,6 +146,7 @@ app.variable = ( line ) =>
  * Parses line to get sass mixin or function
  * 
  * @param {string} line
+ * @param {string} what
  * @return {object}
  */
 app.chunk = ( line, what ) =>
