@@ -1,6 +1,6 @@
 {
   "name": "sass-parser",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A simple npm package to parse a Sass file into a consumable json data",
   "main": "index.js",
   "scripts": {

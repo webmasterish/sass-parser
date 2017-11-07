@@ -8,7 +8,6 @@
 [![Greenkeeper badge](https://img.shields.io/badge/Greenkeeper-enabled-brightgreen.svg?style=flat-square)](https://greenkeeper.io/)
 [![MIT License](https://img.shields.io/npm/l/express.svg?style=flat-square)](http://opensource.org/licenses/MIT)
 
-
 ## What it does
 
 This is a simple package that does a simple task of going through a `sass` file
@@ -20,7 +19,6 @@ it does NOT handle the newer `scss` syntax.  For more details about this,
 have a look at [Sass Syntax](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#Syntax).
 
 The extracted data is useful for usage in documentation or any other similar needs.
-
 
 ## Install
 
@@ -240,8 +238,6 @@ parse.file('index.sass').then( data => console.log( data ) );
   }
 }
 ```
-
-
 
 ## API
 
