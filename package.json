@@ -51,6 +51,6 @@
     "coveralls": "3.0.0",
     "documentation": "5.3.4",
     "mocha": "4.0.1",
-    "nyc": "11.3.0"
+    "nyc": "11.4.1"
   }
 }
