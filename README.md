@@ -6,7 +6,7 @@
 [![Coverage Status](https://img.shields.io/coveralls/github/bstashio/sass-parser/master.svg?style=flat-square)](https://coveralls.io/github/bstashio/sass-parser?branch=master)
 [![npm version](https://img.shields.io/npm/v/sass-parser.svg?style=flat-square)](http://npm.im/sass-parser)
 [![Greenkeeper badge](https://img.shields.io/badge/Greenkeeper-enabled-brightgreen.svg?style=flat-square)](https://greenkeeper.io/)
-[![MIT License](https://img.shields.io/npm/l/express.svg?style=flat-square)](http://opensource.org/licenses/MIT)
+[![MIT License](https://img.shields.io/npm/l/express.svg?style=flat-square)](http://opensource.org/licenses/MIT) [![Greenkeeper badge](https://badges.greenkeeper.io/webmasterish/sass-parser.svg)](https://greenkeeper.io/)
 
 ## What it does
 
