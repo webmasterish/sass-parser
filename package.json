@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bstashio/sass-parser.git"
+    "url": "https://github.com/webmasterish/sass-parser.git"
   },
   "keywords": [
     "sass",
@@ -25,14 +25,14 @@
     "json"
   ],
   "author": {
-    "name": "bstashio",
-    "email": "bstashio@gmx.com",
-    "url": "http://bstash.io"
+    "name": "webmasterish",
+    "email": "webmasterish@gmail.com",
+    "url": "http://webmasterish.com"
   },
   "license": "MIT",
-  "homepage": "https://github.com/bstashio/sass-parser",
+  "homepage": "https://github.com/webmasterish/sass-parser",
   "bugs": {
-    "url": "https://github.com/bstashio/sass-parser/issues"
+    "url": "https://github.com/webmasterish/sass-parser/issues"
   },
   "engines": {
     "node": ">=6"

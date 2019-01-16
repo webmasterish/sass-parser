@@ -3,7 +3,7 @@
 > A simple npm package to parse a `sass` file into a consumable `json` data
 
 [![Build Status](https://img.shields.io/travis/webmasterish/sass-parser/master.svg?style=flat-square)](https://travis-ci.org/webmasterish/sass-parser)
-[![Coverage Status](https://img.shields.io/coveralls/github/bstashio/sass-parser/master.svg?style=flat-square)](https://coveralls.io/github/bstashio/sass-parser?branch=master)
+[![Coverage Status](https://img.shields.io/coveralls/github/webmasterish/sass-parser/master.svg?style=flat-square)](https://coveralls.io/github/webmasterish/sass-parser?branch=master)
 [![npm version](https://img.shields.io/npm/v/sass-parser.svg?style=flat-square)](http://npm.im/sass-parser)
 [![Greenkeeper badge](https://badges.greenkeeper.io/webmasterish/sass-parser.svg?style=flat-square)](https://greenkeeper.io/)
 [![MIT License](https://img.shields.io/npm/l/express.svg?style=flat-square)](http://opensource.org/licenses/MIT)
@@ -303,4 +303,4 @@ Returns **[promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refe
 
 ## License
 
-MIT © [bstashio](https://github.com/bstashio)
+MIT © [webmasterish](https://github.com/webmasterish)
