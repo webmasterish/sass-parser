@@ -55,10 +55,19 @@ Thumbs.db
 # generic node ignores
 node_modules
 /dist
+/build
 
 # testing and coverage related
 coverage
 .nyc_output
+
+# locks
+package-lock.json
+yarn.lock
+
+# file containing environment variables such as secret api keys
+# used in conjunction with dotenv package
+*.env
 
 # ------------------------------------------------------------------------------
 # Misc
@@ -69,4 +78,3 @@ __*
 
 # ide
 .idea
-
