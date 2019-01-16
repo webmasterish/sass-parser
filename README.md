@@ -2,7 +2,7 @@
 
 > A simple npm package to parse a `sass` file into a consumable `json` data
 
-[![Build Status](https://img.shields.io/travis/bstashio/sass-parser/master.svg?style=flat-square)](https://travis-ci.org/bstashio/sass-parser)
+[![Build Status](https://img.shields.io/travis/webmasterish/sass-parser/master.svg?style=flat-square)](https://travis-ci.org/webmasterish/sass-parser)
 [![Coverage Status](https://img.shields.io/coveralls/github/bstashio/sass-parser/master.svg?style=flat-square)](https://coveralls.io/github/bstashio/sass-parser?branch=master)
 [![npm version](https://img.shields.io/npm/v/sass-parser.svg?style=flat-square)](http://npm.im/sass-parser)
 [![Greenkeeper badge](https://img.shields.io/badge/Greenkeeper-enabled-brightgreen.svg?style=flat-square)](https://greenkeeper.io/)
