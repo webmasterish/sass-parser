@@ -50,7 +50,7 @@
     "chai": "4.2.0",
     "coveralls": "3.0.2",
     "documentation": "9.1.1",
-    "mocha": "5.2.0",
+    "mocha": "6.0.0",
     "nyc": "13.1.0"
   }
 }
